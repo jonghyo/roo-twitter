@@ -1,5 +1,4 @@
-import { type Preview, type Decorator } from '@storybook/react'
-import React from 'react'
+import { type Preview } from '@storybook/react'
 
 import '../src/app/globals.css'
 
@@ -12,8 +11,7 @@ const preview: Preview = {
         date: /Date$/i
       }
     }
-  },
-  decorators: [(Story) => React.createElement(Story)] as Decorator[]
+  }
 }
 
 export default preview
