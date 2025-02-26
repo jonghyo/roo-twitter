@@ -3,21 +3,18 @@ import React, { useState } from 'react'
 
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
-import useStore from '@/store/store'
 
-const TweetForm: React.FC = () => {
+export interface TweetFormProps {
+  onSubmit?: (content: string) => void
+}
+
+const TweetForm: React.FC<TweetFormProps> = ({ onSubmit }) => {
   const [content, setContent] = useState('')
-  const { addTweet } = useStore()
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     if (content.length > 0 && content.length <= 280) {
-      const newTweet = {
-        id: Date.now().toString(),
-        content,
-        createdAt: new Date()
-      }
-      addTweet(newTweet)
+      onSubmit?.(content)
       setContent('')
     }
   }
