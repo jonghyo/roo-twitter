@@ -28,7 +28,7 @@ export const WithMockedSubmit: Story = {
     mockData: [
       {
         fn: () => {
-          // eslint-disable-next-line no-console
+           
           console.log('Tweet submitted!')
         }
       }

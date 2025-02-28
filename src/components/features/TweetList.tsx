@@ -39,7 +39,7 @@ export const TweetList = ({ tweets }: TweetListProps) => {
 
   // 新しい順にソート
   const sortedTweets = [...tweets].sort(
-    (a, b) => b.createdAt.getTime() - a.createdAt.getTime()
+    (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
   )
 
   return (

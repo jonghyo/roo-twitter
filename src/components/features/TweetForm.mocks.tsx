@@ -12,7 +12,7 @@ export const MockStoreDecorator = (Story: React.ComponentType) => {
     tweets,
     addTweet: (newTweet: Tweet) => {
       setTweets([...tweets, newTweet])
-      // eslint-disable-next-line no-console
+       
       console.log('Tweet added:', newTweet)
     }
   })
