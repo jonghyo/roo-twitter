@@ -20,11 +20,11 @@
     "license-check": ". .env && license-checker-rseidelsohn --production --summary --excludePrivatePackages --onlyAllow \"$ALLOWED_LICENSES\""
   },
   "dependencies": {
-    "@t3-oss/env-nextjs": "^0.12.0",
+    "@t3-oss/env-nextjs": "^0.13.4",
     "autoprefixer": "^10.4.21",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "lucide-react": "^0.488.0",
+    "lucide-react": "^0.503.0",
     "next": "15.3.1",
     "pino": "^9.6.0",
     "react": "^19.1.0",
